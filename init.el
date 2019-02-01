@@ -6,18 +6,21 @@
 ;; >> 現状は rcodetools.el のため
 (add-to-list 'load-path "/Users/yyh-gl/.emacs.d/elpa/")
 
-;; Window Setting.
+;; CUI Window Setting
 (setq default-frame-alist
       (append (list '(foreground-color . "white") ;azure3
 					'(background-color . "black")
 					'(border-color . "black")
 					'(mouse-color . "white")
 					'(cursor-color . "white")
-					'(width . 139)  ;; <- ココと
-					'(height . 49)  ;; <- ココの数字
+					'(width . 181)  ;; <- ココと
+					'(height . 50)  ;; <- ココの数字
 					'(alpha . (80 60 40 40))
 					)
 			  default-frame-alist))
+
+;; GUI Window Size
+(set-frame-size (selected-frame) 178 70)
 
 ;; LANG Japan
 (set-language-environment 'Japanese)
@@ -37,6 +40,9 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
+;; 文字色
+(set-face-foreground 'default "white")
 
 ;; 行数の表示と色
 (global-linum-mode t)
