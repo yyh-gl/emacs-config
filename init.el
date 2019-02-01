@@ -19,8 +19,13 @@
 					)
 			  default-frame-alist))
 
-;; GUI Window Size
-(set-frame-size (selected-frame) 178 70)
+(if window-system (progn
+		    (when (equal system-type 'darwin)
+              ;; GUI Window Size
+              (set-frame-size (selected-frame) 178 70)
+              ;; 文字色
+              (set-face-foreground 'default "white")
+              )))
 
 ;; LANG Japan
 (set-language-environment 'Japanese)
@@ -40,9 +45,6 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-
-;; 文字色
-(set-face-foreground 'default "white")
 
 ;; 行数の表示と色
 (global-linum-mode t)
