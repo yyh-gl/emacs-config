@@ -6,22 +6,23 @@
 ;; >> 現状は rcodetools.el のため
 (add-to-list 'load-path "/Users/yyh-gl/.emacs.d/elpa/")
 
-;; CUI Window Setting
+;; CUI Window Settings
 (setq default-frame-alist
       (append (list '(foreground-color . "white") ;azure3
 					'(background-color . "black")
 					'(border-color . "black")
 					'(mouse-color . "white")
 					'(cursor-color . "white")
-					'(width . 181)  ;; <- ココと
-					'(height . 50)  ;; <- ココの数字
+					'(width . 181)
+					'(height . 50)
 					'(alpha . (80 60 40 40))
 					)
 			  default-frame-alist))
 
+;; GUI Settings
 (if window-system (progn
 		    (when (equal system-type 'darwin)
-              ;; GUI Window Size
+              ;; Window Size
               (set-frame-size (selected-frame) 178 70)
               ;; 文字色
               (set-face-foreground 'default "white")
