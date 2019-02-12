@@ -355,4 +355,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet markdown-mode yaml-mode json-mode swiper go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
+    (markdown-mode yasnippet yaml-mode json-mode swiper go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
