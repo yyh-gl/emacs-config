@@ -47,6 +47,9 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; フォント（いらないっぽい）
+;(add-to-list 'default-frame-alist '(font . "Ricty Diminished Discord"))
+
 ;; 行数の表示と色
 (global-linum-mode t)
 (set-face-attribute 'linum nil
@@ -132,9 +135,6 @@
 
 ;; git-gutter-frieng
 (global-git-gutter-mode t)
-
-;; change font
-(add-to-list 'default-frame-alist '(font . "Ricty Diminished Discord"))
 
 ;; バックアップファイルを作らないようにする
 (setq make-backup-files nil)
