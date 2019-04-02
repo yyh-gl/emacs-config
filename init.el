@@ -4,7 +4,7 @@
 
 ;; /.emacs.d/elpa 配下の.elファイルを読み込む
 ;; >> 現状は rcodetools.el のため
-(add-to-list 'load-path "/Users/yyh-gl/.emacs.d/elpa/")
+(add-to-list 'load-path "~/.emacs.d/elpa/")
 
 ;; CUI Window Settings
 (setq default-frame-alist
