@@ -90,13 +90,14 @@
 (setq undo-strong-limit 130000)
 
 ;; undo-tree
-(global-undo-tree-mode t)
 ;; C-x u : undo-tree-visualize
 ;; x : 現在地
 ;; p : 一つ上の変更をたどる
 ;; n : 一つ下の変更をたどる
 ;; f，b : 枝の切り替え
 ;; q : 終了
+(global-undo-tree-mode t)
+(define-key global-map (kbd "M-/") 'undo-tree-redo)
 
 ;; 拡張子と関連付け
 ;; (add-to-list 'auto-mode-alist '("\\.nc\\'" . c++-mode))
