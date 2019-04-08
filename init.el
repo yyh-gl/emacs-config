@@ -45,7 +45,8 @@
 (if window-system (progn
 		    (when (equal system-type 'darwin)
               ;; Window Size
-              (set-frame-size (selected-frame) 178 70)
+              (add-to-list 'default-frame-alist '(width  . 177))
+              (add-to-list 'default-frame-alist '(height . 51))
               ;; 文字色
               (set-face-foreground 'default "white")
               )))
