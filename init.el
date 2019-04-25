@@ -268,8 +268,7 @@
 (require 'scala-mode) ;; scala mode
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; タグ自動補完設定
-; タグ = Rubyにおける do ~ end など
+;;; 編集モード切り替え
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -301,6 +300,8 @@
   (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
 ;; markdown-mode
 (when (require 'markdown-mode nil t))
+;; terraform-mode
+(require 'terraform-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Ruby開発におけるのデバッグ出力をコメントとして表示する機能追加
@@ -337,8 +338,6 @@
         (find-alternate-file (concat "/sudo::" file-name))
       (error "Cannot get a file name"))))
 
-
-(require 'terraform-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 追加予定
