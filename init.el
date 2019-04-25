@@ -45,8 +45,8 @@
 (if window-system (progn
 		    (when (equal system-type 'darwin)
               ;; Window Size
-              (add-to-list 'default-frame-alist '(width  . 177))
-              (add-to-list 'default-frame-alist '(height . 51))
+              (add-to-list 'default-frame-alist '(width  . 200))
+              (add-to-list 'default-frame-alist '(height . 58))
               ;; 文字色
               (set-face-foreground 'default "white")
               )))
@@ -337,6 +337,9 @@
         (find-alternate-file (concat "/sudo::" file-name))
       (error "Cannot get a file name"))))
 
+
+(require 'terraform-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 追加予定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -381,7 +384,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode yasnippet yaml-mode json-mode go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
+    (terraform-mode markdown-mode yasnippet yaml-mode json-mode go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
 
 (provide 'init)
 ;;; init.el ends here
