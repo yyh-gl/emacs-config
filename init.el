@@ -14,9 +14,12 @@
 ;;; パッケージ管理システム追加
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("melpa" . "http://melpa.org/packages/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ライブラリ読み込み
@@ -338,6 +341,12 @@
         (find-alternate-file (concat "/sudo::" file-name))
       (error "Cannot get a file name"))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; expand-region設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'expand-region)
+(global-set-key (kbd "C-M-w") 'er/expand-region)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 追加予定
@@ -383,7 +392,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (terraform-mode markdown-mode yasnippet yaml-mode json-mode go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
+    (expand-region terraform-mode markdown-mode yasnippet yaml-mode json-mode go-mode php-mode web-mode yatex undo-tree smartparens smart-compile scala-mode projectile-rails hlinum git-gutter-fringe git-gutter+ flycheck auto-complete 0blayout))))
 
 (provide 'init)
 ;;; init.el ends here
