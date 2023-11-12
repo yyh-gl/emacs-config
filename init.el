@@ -74,7 +74,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 行番号表示
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-linum-mode t)
+(require 'linum)
+(global-linum-mode 1)
 (set-face-attribute 'linum nil
 					:foreground "#ECEFF1" ;; 行番号の色
 					:height 0.5)
